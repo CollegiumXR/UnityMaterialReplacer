@@ -1,8 +1,11 @@
-﻿using UnityEditor;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 using UnityEngine;
 
 public class MaterialReplacer : EditorWindow
 {
+#if UNITY_EDITOR
     private Material _baseMaterial;
     private int _counter;
     private Material _replaceMaterial;
@@ -96,4 +99,5 @@ public class MaterialReplacer : EditorWindow
             SwitchChildMaterials(child);
         }
     }
+#endif
 }
